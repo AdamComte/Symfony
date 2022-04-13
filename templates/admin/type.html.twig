@@ -1,0 +1,16 @@
+
+
+<section>
+    <h2>Ajouter un type</h2>
+    {{ form(formType) }}
+</section>
+<section>
+    <h2>Mes types</h2>
+    {% for type in types %}
+       <div>
+        {{ type.name }}
+           <a href="{{ path('removeType',{'id':type.id}) }}">X</a>
+       </div>
+
+    {% endfor %}
+</section>
